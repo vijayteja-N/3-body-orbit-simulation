@@ -140,7 +140,7 @@ All three bodies interact mutually:
 
 $$
 \mathbf{a}_i =
-\sum*{j \neq i}
+\sum_{j \neq i}
 G m_j
 \frac{\mathbf{r}_j - \mathbf{r}_i}
 {|\mathbf{r}_j - \mathbf{r}_i|^3}
@@ -161,7 +161,7 @@ Simulation:
 * Duration: 30 years
 * Units: SI
 
-Total energy:
+Total mechanical energy:
 
 $$
 E =
@@ -170,6 +170,7 @@ E =
 \sum_{i<j}
 \frac{G m_i m_j}{|\mathbf{r}_i - \mathbf{r}_j|}
 $$
+
 
 ---
 
@@ -190,7 +191,7 @@ $$
 \mathbf{r}_{n+1}
 ================
 
-\mathbf{r}*n
+\mathbf{r}_n
 +
 \Delta t,\mathbf{v}*{n+1/2}
 $$
@@ -199,9 +200,9 @@ $$
 \mathbf{v}_{n+1}
 ================
 
-\mathbf{v}*{n+1/2}
+\mathbf{v}_{n+1/2}
 +
-\frac{\Delta t}{2}\mathbf{a}*{n+1}
+\frac{\Delta t}{2}\mathbf{a}_{n+1}
 $$
 
 Why Leapfrog?

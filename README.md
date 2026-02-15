@@ -32,9 +32,9 @@ The notebook is organized into stages of increasing physical realism.
 * Sun fixed at origin.
 * Dimensionless gravitational potential:
 
-[
+$$
 \mathbf{a} = -\frac{\mathbf{r}}{|\mathbf{r}|^3}
-]
+$$
 
 * Demonstrates:
 
@@ -44,9 +44,9 @@ The notebook is organized into stages of increasing physical realism.
 
 Energy computed as:
 
-[
+$$
 E = \frac{1}{2} v^2 - \frac{1}{r}
-]
+$$
 
 Purpose: Validate numerical integrator in simplest setting.
 
@@ -56,9 +56,9 @@ Purpose: Validate numerical integrator in simplest setting.
 
 Using SI units:
 
-[
+$$
 v = \sqrt{\frac{G M}{r}}
-]
+$$
 
 * Earth initialized in circular orbit.
 * Sun fixed at origin.
@@ -74,16 +74,16 @@ Both bodies move under mutual gravity.
 
 System shifted to center-of-mass frame:
 
-[
+$$
 \mathbf{R}_{cm} =
 \frac{m_E \mathbf{r}_E}{M + m_E}
-]
+$$
 
 Ensures:
 
-[
+$$
 \sum m_i \mathbf{v}_i = 0
-]
+$$
 
 Demonstrates:
 
@@ -138,13 +138,13 @@ Illustrate inconsistency of fixing massive body.
 
 All three bodies interact mutually:
 
-[
+$$
 \mathbf{a}*i =
 \sum*{j \neq i}
 G m_j
 \frac{\mathbf{r}_j - \mathbf{r}_i}
 {|\mathbf{r}_j - \mathbf{r}_i|^3}
-]
+$$
 
 System transformed into barycentric frame.
 
@@ -163,14 +163,14 @@ Simulation:
 
 Total energy:
 
-[
+$$
 E =
 \sum_i \frac{1}{2} m_i v_i^2
 ----------------------------
 
 \sum_{i<j}
 \frac{G m_i m_j}{|\mathbf{r}_i - \mathbf{r}_j|}
-]
+$$
 
 ---
 
@@ -178,32 +178,32 @@ E =
 
 All systems use the Leapfrog (Velocity Verlet) integrator:
 
-[
+$$
 \mathbf{v}_{n+1/2}
 ==================
 
 \mathbf{v}_n
 +
 \frac{\Delta t}{2}\mathbf{a}_n
-]
+$$
 
-[
+$$
 \mathbf{r}_{n+1}
 ================
 
 \mathbf{r}*n
 +
 \Delta t,\mathbf{v}*{n+1/2}
-]
+$$
 
-[
+$$
 \mathbf{v}_{n+1}
 ================
 
 \mathbf{v}*{n+1/2}
 +
 \frac{\Delta t}{2}\mathbf{a}*{n+1}
-]
+$$
 
 Why Leapfrog?
 

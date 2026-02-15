@@ -139,7 +139,7 @@ Illustrate inconsistency of fixing massive body.
 All three bodies interact mutually:
 
 $$
-\mathbf{a}*i =
+\mathbf{a}_i =
 \sum*{j \neq i}
 G m_j
 \frac{\mathbf{r}_j - \mathbf{r}_i}
@@ -166,8 +166,7 @@ Total energy:
 $$
 E =
 \sum_i \frac{1}{2} m_i v_i^2
-----------------------------
-
+-
 \sum_{i<j}
 \frac{G m_i m_j}{|\mathbf{r}_i - \mathbf{r}_j|}
 $$

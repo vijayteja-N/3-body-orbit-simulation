@@ -167,7 +167,7 @@ $$
 E =
 \sum_i \frac{1}{2} m_i v_i^2
 -\sum_{i<j}
-\frac{G m_i m_j}{\left|\mathbf{r}_i - \mathbf{r}_j\rihgt|}
+\frac{G m_i m_j}{\left|\mathbf{r}_i - \mathbf{r}_j\right|}
 $$
 
 

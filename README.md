@@ -166,8 +166,7 @@ Total mechanical energy:
 $$
 E =
 \sum_i \frac{1}{2} m_i v_i^2
-
-\sum_{i<j}
+-\sum_{i<j}
 \frac{G m_i m_j}{|\mathbf{r}_i - \mathbf{r}_j|}
 $$
 
@@ -180,27 +179,21 @@ All systems use the Leapfrog (Velocity Verlet) integrator:
 
 $$
 \mathbf{v}_{n+1/2}
-
-
-\mathbf{v}_n
+=\mathbf{v}_n
 +
 \frac{\Delta t}{2}\mathbf{a}_n
 $$
 
 $$
 \mathbf{r}_{n+1}
-
-
-\mathbf{r}_n
+=\mathbf{r}_n
 +
-\Delta t,\mathbf{v}*{n+1/2}
+\Delta t,\mathbf{v}_{n+1/2}
 $$
 
 $$
 \mathbf{v}_{n+1}
-
-
-\mathbf{v}_{n+1/2}
+=\mathbf{v}_{n+1/2}
 +
 \frac{\Delta t}{2}\mathbf{a}_{n+1}
 $$

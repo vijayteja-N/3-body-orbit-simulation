@@ -173,8 +173,88 @@ $$
 
 
 
+## 8️⃣ Chaotic Three-Body Regimes (Bound and Unbound Systems)
+
+To investigate nonlinear gravitational dynamics beyond near-Keplerian motion, a series of **randomized barycentric three-body systems** were constructed and evolved over multi-year timescales.
+
+Instead of initializing bodies in near-elliptical Keplerian configurations, arbitrary positions and velocity vectors were assigned while enforcing:
+
+$$
+\mathbf{R}*{cm} = 0, \quad
+\mathbf{V}*{cm} = 0
+$$
+
+This ensures total linear momentum conservation and eliminates artificial center-of-mass drift.
+
 ---
 
+### Energy Classification
+
+The total mechanical energy is computed as:
+
+$$
+E =
+\sum_i \frac{1}{2} m_i v_i^2
+-\sum_{i=1}^{N} \sum_{j=i+1}^{N}
+\frac{G m_i m_j}
+{\left|\mathbf{r}_i - \mathbf{r}_j\right|}
+$$
+
+Two dynamical regimes were explored:
+
+---
+
+### 🔹 Case A: Bound Systems ($E < 0$)
+
+* 10 independent initial conditions generated
+* Velocities scaled to maintain negative total energy
+* Bodies remain gravitationally bound
+* Highly irregular but confined trajectories
+* Strong sensitivity to initial conditions
+* Long-term quasi-chaotic orbital evolution
+
+These simulations demonstrate nonlinear orbital coupling and chaotic exchange of angular momentum while remaining energetically bound.
+
+---
+
+### 🔹 Case B: Unbound Systems ($E > 0$)
+
+* 10 independent initial conditions generated
+* Velocities scaled to ensure positive total energy
+* Bodies undergo scattering events
+* Hyperbolic escape trajectories observed
+* Temporary resonant interactions before ejection
+
+These simulations illustrate gravitational scattering and three-body instability mechanisms.
+
+---
+
+### Numerical Details
+
+* Time step: 300 seconds (5 minutes)
+* Duration: 5 years per simulation
+* Integrator: Symplectic Leapfrog (Velocity Verlet)
+* Data stored at reduced sampling interval for computational efficiency
+* Each case produces:
+
+  * Orbital trajectory plot
+  * Energy vs time plot
+
+---
+
+### Physical Insight
+
+This section demonstrates:
+
+* Extreme sensitivity to initial conditions
+* Breakdown of regular orbital structure
+* Energy partitioning during close encounters
+* Difference between bound chaotic motion and gravitational escape
+* Long-term stability limits of three-body systems
+
+These simulations move beyond classical Keplerian mechanics into genuinely nonlinear gravitational dynamics.
+
+---
 # Numerical Method
 
 All systems use the Leapfrog (Velocity Verlet) integrator:
